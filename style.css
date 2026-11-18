@@ -80,6 +80,7 @@ body{
   box-shadow:4px 4px 0 var(--encre);
   transition:transform .08s, box-shadow .08s;
 }
+.big:hover{background:var(--jaune)}
 .big:active{transform:translate(4px,4px); box-shadow:0 0 0 var(--encre)}
 
 .mini{
