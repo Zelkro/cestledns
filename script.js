@@ -82,6 +82,12 @@ const questions = [
     choix: ["4", "6", "8"],
     bon: 1,
     mot: "8 adresses au total, moins le réseau et le broadcast."
+  },
+  {
+    texte: "Sur quel port écoute le DNS par défaut ?",
+    choix: ["53", "67", "123"],
+    bon: 0,
+    mot: "Le 67 c'est DHCP et le 123 c'est NTP. Le 53, c'est toujours le DNS."
   }
 ];
 
@@ -163,6 +169,7 @@ function terminer() {
     "Ça sent la séance de rattrapage.",
     "Correct, sans plus.",
     "Solide.",
+    "Bien joué.",
     "Presque parfait.",
     "Tu peux animer le prochain TP."
   ];
