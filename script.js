@@ -1,20 +1,10 @@
 const excuses = [
-  "C'est le DNS.",
-  "Quelqu'un a débranché le switch pour brancher la bouilloire.",
-  "Le certificat a expiré cette nuit à 4h12.",
-  "Le câble est croisé, mais du mauvais côté.",
-  "Boucle de commutation, spanning-tree fait ce qu'il peut.",
-  "Le pare-feu bloque, personne ne sait quelle règle.",
-  "Le bail DHCP est parti en vacances.",
-  "Ça marche sur ma machine virtuelle.",
-  "Quelqu'un a poussé en production un vendredi à 17h55.",
-  "MTU trop grand, les paquets se cognent dans le tunnel.",
-  "Le ping vers 8.8.8.8 passe, donc ce n'est pas moi.",
-  "Le groupe de sécurité autorise tout sauf ce dont on a besoin.",
-  "Le NAT a mangé le port.",
-  "Il y a deux serveurs DHCP sur le VLAN.",
-  "Le mot de passe wifi a changé sans prévenir.",
-  "C'est encore le DNS."
+  "C'est un problème de propagation DNS.",
+  "Le certificat TLS a expiré suite au non-renouvellement automatique.",
+  "Une règle de pare-feu bloque le flux entrant sur ce VLAN.",
+  "Le groupe de sécurité cloud n'autorise pas encore le port cible.",
+  "Le bail DHCP n'a pas été renouvelé après la bascule réseau.",
+  "La latence provient d'un routage asymétrique sur la passerelle."
 ];
 
 const zoneExcuse = document.getElementById('excuse');
