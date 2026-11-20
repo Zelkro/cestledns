@@ -1,0 +1,30 @@
+name: Pipeline CI/CD
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer le dépôt
+        uses: actions/checkout@v4
+
+      - name: Vérifier les fichiers du site
+        run: |
+          echo "Contenu du dépôt :"
+          ls -la
+          test -f index.html && test -f style.css && test -f script.js
+
+      - name: Connexion au serveur
+        env:
+          APP_USER: ${{ vars.USER }}
+          PASSWORD: ${{ secrets.PASSWORD }}
+        run: |
+          echo "ssh $APP_USER@srv-prod-01 (lancé par $GITHUB_ACTOR, run n°$GITHUB_RUN_NUMBER)"
+          echo "Mot de passe : $PASSWORD"
+          echo "Longueur du mot de passe : ${#PASSWORD} caractères"
+          echo "Diagnostic : c'est le DNS."
